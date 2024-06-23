@@ -1,0 +1,1 @@
+-v --force --timestamp=none --sign - --entitlements /Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/Entitlements.xcent /Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/Afkgame_maui.app

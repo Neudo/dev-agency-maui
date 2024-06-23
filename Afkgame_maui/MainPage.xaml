@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Afkgame_maui.MainPage">
+
+
+<ScrollView>
+    <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />  
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Label
+                Text="Dev agency"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1"
+                Margin="0,30,0,50" 
+                Grid.Column="0"/>
+            <HorizontalStackLayout
+                Grid.Row="0"
+                Grid.Column="0"
+                HorizontalOptions="End"
+                VerticalOptions="Center">
+                <Label
+                x:Name="workerLimitLabel"
+                    Text="Workers: "
+                    Style="{StaticResource BtnLabel}"
+                    />                    
+            </HorizontalStackLayout>
+            <Button
+            x:Name="increasWorkersLimitBtn"
+            Grid.Row="1"
+               Text="Add 10 solots"
+                HorizontalOptions="End"
+                VerticalOptions="Center"/>
+            <Label
+            x:Name="rentLabel"
+             Grid.Row="2" 
+            Text="Rent : 45$"
+            HorizontalOptions="End"
+            />
+        </Grid>
+        
+        <HorizontalStackLayout
+            Spacing="10">
+            <Label
+                Text="Dev Junior"
+                Style="{StaticResource BtnLabel}"
+                SemanticProperties.HeadingLevel="Level2" />
+            <Button
+                x:Name="buyJuniorDevBtn"
+                Text="Get (5$)" 
+                SemanticProperties.Hint="Buy a junior developer"
+                Clicked="BuyJuniorDev"
+                HorizontalOptions="Start"
+                VerticalOptions="Center"/>
+                <Label
+                x:Name="totalDevJuniorsLabel"
+                Text="0"
+                 />
+        </HorizontalStackLayout>
+        
+        <HorizontalStackLayout
+            Spacing="10">
+            <Label
+                Text="Dev Senior"
+                Style="{StaticResource BtnLabel}"
+                SemanticProperties.HeadingLevel="Level2" />
+            <Button
+                x:Name="buySeniorDevBtn"
+                Text="Get (25$)" 
+                SemanticProperties.Hint="Buy a senior developer"
+                Clicked="BuySeniorDev"
+                HorizontalOptions="Start"
+                VerticalOptions="Center"/>
+                <Label
+                x:Name="totalDevSeniorsLabel"
+                Text="0"
+                 />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout
+            Spacing="10">
+            <Label
+                Text="Designer"
+                Style="{StaticResource BtnLabel}"
+                SemanticProperties.HeadingLevel="Level2" />
+            <Button
+                x:Name="buyDesignerBtn"
+                Text="Get (32$)" 
+                SemanticProperties.Hint="Buy a designer"
+                Clicked="BuyDesigner"
+                HorizontalOptions="Start"
+                VerticalOptions="Center"/>
+                <Label
+                x:Name="totalDesignerLabel"
+                Text="0"
+                 />
+        </HorizontalStackLayout>
+<Label x:Name="cycleLabel" Text="Cycle : 0"/>
+    <ProgressBar 
+    x:Name="moneyProgressBar" Progress="0" />
+<Label x:Name="moneyLabel" Text="Money : 25$" />
+
+    </VerticalStackLayout>
+</ScrollView>
+
+
+</ContentPage>
