@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using Afkgame_maui;
-using Microsoft.Maui.Controls;
+using CommunityToolkit.Maui.Alerts;
 
 namespace Afkgame
 {
@@ -28,6 +28,11 @@ namespace Afkgame
         public event EventHandler SalaryPaid;
         public event EventHandler RentPaid;
 
+        public event EventHandler WorkersPaidSuccessfully;
+        public event EventHandler RentPaidSuccessfully;
+        public event EventHandler GameIsOver;
+
+
         public GameManager()
         {
             Money = 25;
@@ -42,7 +47,9 @@ namespace Afkgame
             // Timer
             if (isGameActive)
             {
-                moneyGenerationTimer = new Timer(OnMoneyGenerated, null, 0, 10000); // 10 secondes
+                moneyGenerationTimer = new Timer(OnMoneyGenerated, null, 0, 1000); // 10 secondes
+            } else {
+                moneyGenerationTimer?.Change(Timeout.Infinite, Timeout.Infinite);
             }
         }
 
@@ -106,13 +113,13 @@ namespace Afkgame
             Money -= totalSalary;
             if (Money <= -1)
             {
-                GameOver();
+              GameOver();
             }
             else
-            {
-                Application.Current.MainPage.DisplayAlert("Notification", $"You just paid yours workers {totalSalary}", "OK");
-                SalaryPaid?.Invoke(this, EventArgs.Empty);
-            }
+             {
+                  WorkersPaidSuccessfully?.Invoke(this, EventArgs.Empty);
+                  SalaryPaid?.Invoke(this, EventArgs.Empty);
+    }
         }
 
         private void PayRent()
@@ -123,17 +130,22 @@ namespace Afkgame
                 GameOver();
             }
             else
-            {            
-                App.Current.MainPage.DisplayAlert("Notification", $"You just paid your rent {Rent}", "OK");
+            {
+                RentPaidSuccessfully.Invoke(this, EventArgs.Empty);
                 RentPaid?.Invoke(this, EventArgs.Empty);
             }
         }
-
         private void GameOver()
         {
-            isGameActive = false;
-            moneyGenerationTimer?.Change(Timeout.Infinite, Timeout.Infinite);
-            Application.Current.MainPage.DisplayAlert("Game Over", "Game over .....", "OK");
+            isGameActive = false;        
+            GameIsOver?.Invoke(this, EventArgs.Empty);
+
+            RestartGame();
+        }
+
+        private void RestartGame()
+        {
+            isGameActive = true;
             Money = 25;
             Workers.Clear();
             TotalDevJuniors = 0;
@@ -142,13 +154,6 @@ namespace Afkgame
             MaxWorkers = 10;
             Cycles = 0;
             Rent = 45;
-            RestartGame();
-        }
-
-        private void RestartGame()
-        {
-            isGameActive = true;
-            moneyGenerationTimer?.Change(0, 10000);
         }
     }
 }

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "6CNWvaXSVTp6xIS02PWwKGpyNdwrNphnU/Xwk0fi0W+jLwqJIJX7lDSXcGXz0d+bBcwFbi7YAxOqzNTJ4shiuw==",
+  "dgSpecHash": "A0qPWpXD+PcSwaf5CQWt+xVwUNrEDB5EzC/MYfuJdpL2PGs0bbIIGygKTM+OR9kHWYUPgX2fZ5oLvEfFGnPBTA==",
   "success": true,
   "projectFilePath": "/Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/Afkgame_maui.csproj",
   "expectedPackageFiles": [
+    "/Users/quentin/.nuget/packages/communitytoolkit.maui/3.0.0/communitytoolkit.maui.3.0.0.nupkg.sha512",
+    "/Users/quentin/.nuget/packages/communitytoolkit.maui.core/3.0.0/communitytoolkit.maui.core.3.0.0.nupkg.sha512",
     "/Users/quentin/.nuget/packages/googlegson/2.10.1.4/googlegson.2.10.1.4.nupkg.sha512",
     "/Users/quentin/.nuget/packages/microsoft.extensions.configuration/8.0.0/microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "/Users/quentin/.nuget/packages/microsoft.extensions.configuration.abstractions/8.0.0/microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
@@ -11,7 +13,7 @@
     "/Users/quentin/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "/Users/quentin/.nuget/packages/microsoft.extensions.logging/8.0.0/microsoft.extensions.logging.8.0.0.nupkg.sha512",
     "/Users/quentin/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
-    "/Users/quentin/.nuget/packages/microsoft.extensions.logging.debug/8.0.0/microsoft.extensions.logging.debug.8.0.0.nupkg.sha512",
+    "/Users/quentin/.nuget/packages/microsoft.extensions.logging.debug/7.0.0/microsoft.extensions.logging.debug.7.0.0.nupkg.sha512",
     "/Users/quentin/.nuget/packages/microsoft.extensions.options/8.0.0/microsoft.extensions.options.8.0.0.nupkg.sha512",
     "/Users/quentin/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "/Users/quentin/.nuget/packages/microsoft.maui.controls/8.0.7/microsoft.maui.controls.8.0.7.nupkg.sha512",

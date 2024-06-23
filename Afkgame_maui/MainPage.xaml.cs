@@ -1,4 +1,7 @@
 ﻿using Afkgame;
+using CommunityToolkit.Maui.Alerts;
+using CommunityToolkit.Maui.Core;
+
 
 namespace Afkgame_maui;
 
@@ -14,6 +17,9 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 		gameManager = new GameManager();
 		gameManager.MoneyGenerated += GameManager_MoneyGenerated;
+        gameManager.WorkersPaidSuccessfully += OnWorkersPaidSuccessfully;
+        gameManager.RentPaidSuccessfully += OnRentPaidSuccessfully;
+
 		UpdateUI();
 		AnimateProgressBar();
 	}
@@ -25,6 +31,7 @@ private void GameManager_MoneyGenerated(object sender, EventArgs e)
                 UpdateUI();
             });
         }
+
 
         private void IncreaseWorkersLimit(object sender, EventArgs e)
         {
@@ -46,10 +53,12 @@ private void GameManager_MoneyGenerated(object sender, EventArgs e)
 
         private void BuyJuniorDev(object sender, EventArgs e)
         {
-            Worker newJuniorDev = new Worker("Junior Dev", 5, 3, 18);
+            Worker newJuniorDev = new Worker("Junior Dev", 5, 3, 3);
             if (gameManager.BuyWorker(newJuniorDev))
             {
-                DisplayAlert("Info", "Junior bought!", "OK");
+               string message; 
+                 message = $"Junior Dev bought";
+                 var toast = Toast.Make(message, CommunityToolkit.Maui.Core.ToastDuration.Long, 30).Show();
                 UpdateUI();
             }
             else
@@ -60,10 +69,12 @@ private void GameManager_MoneyGenerated(object sender, EventArgs e)
 
         private void BuySeniorDev(object sender, EventArgs e)
         {
-            Worker newSeniorDev = new Worker("Senior Dev", 25, 9, 60);
+            Worker newSeniorDev = new Worker("Senior Dev", 25, 9, 6);
             if (gameManager.BuyWorker(newSeniorDev))
             {
-                DisplayAlert("Info", "Senior bought!", "OK");
+                string message; 
+                 message = $"Senior Dev bought";
+                 var toast = Toast.Make(message, CommunityToolkit.Maui.Core.ToastDuration.Long, 30).Show();
                 UpdateUI();
             }
             else
@@ -74,16 +85,44 @@ private void GameManager_MoneyGenerated(object sender, EventArgs e)
 
         private void BuyDesigner(object sender, EventArgs e)
         {
-            Worker newDesigner = new Worker("Designer", 32, 13, 700);
+            Worker newDesigner = new Worker("Designer", 32, 13, 7);
             if (gameManager.BuyWorker(newDesigner))
             {
-                DisplayAlert("Info", "Designer bought!", "OK");
+                string message; 
+                 message = $"Designer bought";
+                 var toast = Toast.Make(message, CommunityToolkit.Maui.Core.ToastDuration.Long, 30).Show();
                 UpdateUI();
             }
             else
             {
                 buyDesignerBtn.IsEnabled = false;
             }
+        }
+
+        private void OnRentPaidSuccessfully(object sender, EventArgs e)
+        {
+                   MainThread.BeginInvokeOnMainThread(() =>
+    {
+         string message; 
+            message = $"You paid your rent";
+            var toast = Toast.Make(message, CommunityToolkit.Maui.Core.ToastDuration.Long, 30);
+            toast.Show();
+    }); 
+        }
+
+        private void OnWorkersPaidSuccessfully(object sender, EventArgs e)
+{
+        MainThread.BeginInvokeOnMainThread(() =>
+    {
+        ToastPayWorker();
+    });
+}
+         private void ToastPayWorker()
+        {
+            string message; 
+            message = $"You paid your workers";
+            var toast = Toast.Make(message, CommunityToolkit.Maui.Core.ToastDuration.Long, 30);
+            toast.Show();
         }
 
         private void UpdateUI()

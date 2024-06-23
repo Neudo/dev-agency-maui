@@ -51,14 +51,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			A5UB9fvgSGgtp9Qs2cssxhWwKQUA+HepNPzae36dwuY=
+			JeD4sYuOF7vK9eYvRWrWKVeih9Ng+Q/6aZywmm3n/5I=
 			</data>
 		</dict>
 		<key>MonoBundle/Afkgame_maui.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NV9usM4pAI8R8Ppw8CKIBFfXpL5DOb8jKLvo97LddOI=
+			T/qdHnIoaidvgn6VNuTq4VOQJ0kSVdxejpg55zFWFCU=
+			</data>
+		</dict>
+		<key>MonoBundle/CommunityToolkit.Maui.Core.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zNLPRTdjvmankZnyce4fdd7lvaQlvrh811VwO8zFHfw=
+			</data>
+		</dict>
+		<key>MonoBundle/CommunityToolkit.Maui.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			YHZp2axxFNL6n4EwumXezOjIf86BB7k+Wjazic3VCuo=
 			</data>
 		</dict>
 		<key>MonoBundle/Microsoft.CSharp.dll</key>
@@ -107,7 +121,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eYsHFOPf6OgNEuL67oJXu10F5EMsl1zFEMuDsz/2AEg=
+			hoaLdDFu4lFqttRgjVM6lkpLRzXw4ZBWu0HDoWlmn/8=
 			</data>
 		</dict>
 		<key>MonoBundle/Microsoft.Extensions.Logging.dll</key>

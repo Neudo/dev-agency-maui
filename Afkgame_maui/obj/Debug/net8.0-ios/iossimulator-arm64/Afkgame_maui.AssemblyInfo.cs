@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Afkgame_maui")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+748d1e060922e2c88ed4d0de1c1edc86e481ccc0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Afkgame_maui")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Afkgame_maui")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
