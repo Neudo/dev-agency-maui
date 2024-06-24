@@ -51,14 +51,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CnJKrWeNIO41ywLfyN7fXay64cnIyRCxrHtaCLkLusI=
+			67Wm4X5LzXRW1L/D71dZXBL5jcJ/O/n9oddJ1kEJznc=
 			</data>
 		</dict>
 		<key>MonoBundle/Afkgame_maui.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2YxHPNj1UbPG/Fo2CGknU8aOOVbPnYxb7KaKrz2CZOs=
+			8pNIRB6Ni8zds7Bagy5dXhePoPQ2fe2DzurUCB0APuM=
 			</data>
 		</dict>
 		<key>MonoBundle/CommunityToolkit.Maui.Core.dll</key>
@@ -89,6 +89,27 @@
 			/vzbJnpzCZy5Dlr1a17yvKWb7ZdDObOmgQNSveI1N6Y=
 			</data>
 		</dict>
+		<key>MonoBundle/Microsoft.Extensions.Configuration.Binder.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wNKhG3Ovx8jqxbscz2AALlsTLfI6GL2dyDhe63mSsoM=
+			</data>
+		</dict>
+		<key>MonoBundle/Microsoft.Extensions.Configuration.FileExtensions.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			n2fRP2/1tGNzaCF5PU4hgTSlHK886OviBf2YAds3NdE=
+			</data>
+		</dict>
+		<key>MonoBundle/Microsoft.Extensions.Configuration.Json.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			R28/ywLWxIcFxKtDIj0IxC+bXi4urX6BHeLL24R+vTQ=
+			</data>
+		</dict>
 		<key>MonoBundle/Microsoft.Extensions.Configuration.dll</key>
 		<dict>
 			<key>hash2</key>
@@ -108,6 +129,27 @@
 			<key>hash2</key>
 			<data>
 			jW57ZMzlVPCg+9srqAdFiV+gtObMN4uf7f6M6G8NiuQ=
+			</data>
+		</dict>
+		<key>MonoBundle/Microsoft.Extensions.FileProviders.Abstractions.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7PzvEcQvpK1c8tTX9VPI8AF+XrekqbAytNBQXJjvTvQ=
+			</data>
+		</dict>
+		<key>MonoBundle/Microsoft.Extensions.FileProviders.Physical.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sXujvGMZDgBBZ9HqfcEq9XsM0pvwyhPt60NA9qLDzGI=
+			</data>
+		</dict>
+		<key>MonoBundle/Microsoft.Extensions.FileSystemGlobbing.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			viiXOG0fwhWobT0TQ1ZOJiZBdRvYRlWbDtjz+6d8sQI=
 			</data>
 		</dict>
 		<key>MonoBundle/Microsoft.Extensions.Logging.Abstractions.dll</key>

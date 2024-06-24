@@ -38,8 +38,14 @@
 /Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../Afkgame_maui.app/Contents/MonoBundle/CommunityToolkit.Maui.Core.dll
 /Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../Afkgame_maui.app/Contents/MonoBundle/Microsoft.Extensions.Configuration.dll
 /Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../Afkgame_maui.app/Contents/MonoBundle/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../Afkgame_maui.app/Contents/MonoBundle/Microsoft.Extensions.Configuration.Binder.dll
+/Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../Afkgame_maui.app/Contents/MonoBundle/Microsoft.Extensions.Configuration.FileExtensions.dll
+/Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../Afkgame_maui.app/Contents/MonoBundle/Microsoft.Extensions.Configuration.Json.dll
 /Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../Afkgame_maui.app/Contents/MonoBundle/Microsoft.Extensions.DependencyInjection.dll
 /Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../Afkgame_maui.app/Contents/MonoBundle/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../Afkgame_maui.app/Contents/MonoBundle/Microsoft.Extensions.FileProviders.Abstractions.dll
+/Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../Afkgame_maui.app/Contents/MonoBundle/Microsoft.Extensions.FileProviders.Physical.dll
+/Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../Afkgame_maui.app/Contents/MonoBundle/Microsoft.Extensions.FileSystemGlobbing.dll
 /Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../Afkgame_maui.app/Contents/MonoBundle/Microsoft.Extensions.Logging.dll
 /Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../Afkgame_maui.app/Contents/MonoBundle/Microsoft.Extensions.Logging.Abstractions.dll
 /Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/publish/../Afkgame_maui.app/Contents/MonoBundle/Microsoft.Extensions.Logging.Debug.dll

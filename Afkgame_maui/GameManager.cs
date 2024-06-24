@@ -35,6 +35,8 @@ namespace Afkgame
         public event EventHandler GameIsOver;
 
 
+
+
         public GameManager()
         {
             Money = 25;

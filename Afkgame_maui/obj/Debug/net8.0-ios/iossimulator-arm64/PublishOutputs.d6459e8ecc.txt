@@ -38,8 +38,14 @@
 /Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Afkgame_maui.app/CommunityToolkit.Maui.Core.dll
 /Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Afkgame_maui.app/Microsoft.Extensions.Configuration.dll
 /Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Afkgame_maui.app/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Afkgame_maui.app/Microsoft.Extensions.Configuration.Binder.dll
+/Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Afkgame_maui.app/Microsoft.Extensions.Configuration.FileExtensions.dll
+/Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Afkgame_maui.app/Microsoft.Extensions.Configuration.Json.dll
 /Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Afkgame_maui.app/Microsoft.Extensions.DependencyInjection.dll
 /Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Afkgame_maui.app/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Afkgame_maui.app/Microsoft.Extensions.FileProviders.Abstractions.dll
+/Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Afkgame_maui.app/Microsoft.Extensions.FileProviders.Physical.dll
+/Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Afkgame_maui.app/Microsoft.Extensions.FileSystemGlobbing.dll
 /Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Afkgame_maui.app/Microsoft.Extensions.Logging.dll
 /Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Afkgame_maui.app/Microsoft.Extensions.Logging.Abstractions.dll
 /Users/quentin/Desktop/Webstart/dev_3/c#/Afkgame_maui/Afkgame_maui/bin/Debug/net8.0-ios/iossimulator-arm64/publish/../Afkgame_maui.app/Microsoft.Extensions.Logging.Debug.dll

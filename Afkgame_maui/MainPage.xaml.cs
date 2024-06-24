@@ -1,20 +1,20 @@
 ﻿using Afkgame;
 using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
-
-
+using Microsoft.Extensions.Configuration;
 namespace Afkgame_maui;
 
 public partial class MainPage : ContentPage
 {
 	
 	private GameManager gameManager;
-    
+	IConfiguration configuration;
 
-
-	public MainPage()
+	public MainPage(IConfiguration config)
 	{
 		InitializeComponent();
+    
+        configuration = config;
 		gameManager = new GameManager();
 		gameManager.MoneyGenerated += GameManager_MoneyGenerated;
         gameManager.WorkersPaidSuccessfully += OnWorkersPaidSuccessfully;
@@ -45,11 +45,13 @@ private void GameManager_MoneyGenerated(object sender, EventArgs e)
 
         private void BuyJuniorDev(object sender, EventArgs e)
         {
+            Settings settings1= new Settings();
             Worker newJuniorDev = new Worker("Junior Dev", 5, 3, 3);
             if (gameManager.BuyWorker(newJuniorDev))
             {
                string message; 
-                 message = $"Junior Dev bought";
+               var settings = configuration.GetRequiredSection("Settings").Get<Afkgame_maui.Settings>();
+                 message = $"Junior Dev bought {settings.costSetting} ";
                  var toast = Toast.Make(message, CommunityToolkit.Maui.Core.ToastDuration.Long, 30).Show();
                 UpdateUI(); 
             }
