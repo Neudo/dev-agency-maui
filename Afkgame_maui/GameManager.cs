@@ -18,6 +18,8 @@ namespace Afkgame
         public int TotalDevSeniors { get; private set; }
         public int TotalDesigners { get; private set; }
         public int MaxWorkers { get; set; }
+        public int cost {get; set;}
+        public bool CanIncrease { get => Money >= cost ; }
         public int Cycles { get; private set; }
         public double Rent { get; set; }
 
@@ -43,6 +45,7 @@ namespace Afkgame
             MaxWorkers = 10;
             Cycles = 0;
             Rent = 45;
+            cost = 300;
 
             // Timer
             if (isGameActive)

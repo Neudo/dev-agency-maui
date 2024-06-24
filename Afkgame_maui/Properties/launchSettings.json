@@ -4,5 +4,8 @@
       "commandName": "MsixPackage",
       "nativeDebugging": false
     }
+  },
+  "Settings": {
+    "cost": 300
   }
 }

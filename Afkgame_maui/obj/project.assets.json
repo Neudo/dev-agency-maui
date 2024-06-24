@@ -2238,7 +2238,7 @@
         }
       }
     },
-    "net8.0-android34.0/maccatalyst-arm64": {
+    "net8.0-android34.0/iossimulator-arm64": {
       "CommunityToolkit.Maui/3.0.0": {
         "type": "package",
         "dependencies": {
@@ -4926,7 +4926,7 @@
         }
       }
     },
-    "net8.0-ios17.2/maccatalyst-arm64": {
+    "net8.0-ios17.2/iossimulator-arm64": {
       "CommunityToolkit.Maui/3.0.0": {
         "type": "package",
         "dependencies": {
@@ -5828,7 +5828,7 @@
         }
       }
     },
-    "net8.0-maccatalyst17.2/maccatalyst-arm64": {
+    "net8.0-maccatalyst17.2/iossimulator-arm64": {
       "CommunityToolkit.Maui/3.0.0": {
         "type": "package",
         "dependencies": {
@@ -9813,7 +9813,7 @@
       }
     },
     "runtimes": {
-      "maccatalyst-arm64": {
+      "iossimulator-arm64": {
         "#import": []
       }
     }

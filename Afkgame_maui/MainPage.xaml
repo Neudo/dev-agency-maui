@@ -37,6 +37,8 @@
             </HorizontalStackLayout>
             <Button
             x:Name="increasWorkersLimitBtn"
+            IsEnabled="{Binding gameManager.canIncrease}"
+            Clicked="IncreaseWorkersLimit"
             Grid.Row="1"
                Text="Add 10 solots"
                 HorizontalOptions="End"

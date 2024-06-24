@@ -9,7 +9,7 @@ public partial class MainPage : ContentPage
 {
 	
 	private GameManager gameManager;
-	int cost = 300;
+    
 
 
 	public MainPage()
@@ -35,21 +35,13 @@ private void GameManager_MoneyGenerated(object sender, EventArgs e)
 
         private void IncreaseWorkersLimit(object sender, EventArgs e)
         {
-            increasWorkersLimitBtn.IsEnabled = false;
-            if (gameManager.Money >= cost)
-            {
-                gameManager.MaxWorkers += 10;
-                gameManager.Money -= 300;
-                gameManager.Rent *= 3;
-                cost = cost * 3;
-                UpdateUI();
-            }
-            else
-            {
-                increasWorkersLimitBtn.IsEnabled = false;
-                UpdateUI();
-            }
+            gameManager.MaxWorkers += 10;
+            gameManager.Money -= gameManager.cost;
+            gameManager.Rent *= 3;
+            gameManager.cost = gameManager.cost * 3;
+            UpdateUI();
         }
+
 
         private void BuyJuniorDev(object sender, EventArgs e)
         {
@@ -59,7 +51,7 @@ private void GameManager_MoneyGenerated(object sender, EventArgs e)
                string message; 
                  message = $"Junior Dev bought";
                  var toast = Toast.Make(message, CommunityToolkit.Maui.Core.ToastDuration.Long, 30).Show();
-                UpdateUI();
+                UpdateUI(); 
             }
             else
             {
@@ -135,7 +127,7 @@ private void GameManager_MoneyGenerated(object sender, EventArgs e)
             workerLimitLabel.Text = $"{gameManager.Workers.Count} / {gameManager.MaxWorkers} Workers";
             rentLabel.Text = $"Rent : {gameManager.Rent} ";
 
-            increasWorkersLimitBtn.Text = $"Add 10 slots ({cost}$)";
+            increasWorkersLimitBtn.Text = $"Add 10 slots ({gameManager.cost}$)";
 
             bool canBuyMoreWorkers = (gameManager.TotalDevJuniors + gameManager.TotalDevSeniors + gameManager.TotalDesigners) < gameManager.MaxWorkers;
 
@@ -144,7 +136,7 @@ private void GameManager_MoneyGenerated(object sender, EventArgs e)
             buySeniorDevBtn.IsEnabled = canBuyMoreWorkers && gameManager.Money >= 25;
             buyDesignerBtn.IsEnabled = canBuyMoreWorkers && gameManager.Money >= 32;
 
-            if (cost >= gameManager.Money)
+            if (gameManager.cost >= gameManager.Money)
             {
                 increasWorkersLimitBtn.IsEnabled = false;
             }
