@@ -1,5 +1,12 @@
 {
   "Settings": {
-    "costSetting": 300
+    "money": 25,
+    "totalDevJunior": 0,
+    "totalDevSenior": 0,
+    "totalDesigner": 0,
+    "maxWorkers": 0,
+    "cycles": 0,
+    "rent": 45,
+    "cost": 300
   }
 }

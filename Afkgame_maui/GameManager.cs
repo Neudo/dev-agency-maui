@@ -10,19 +10,13 @@ namespace Afkgame
     internal class GameManager
     {
         public double Money { get; set; }
+        private Settings settings;
 
         // Liste pour gérer les workers
         public List<Worker> Workers { get; private set; }
-
-        public int TotalDevJuniors { get; private set; }
-        public int TotalDevSeniors { get; private set; }
-        public int TotalDesigners { get; private set; }
-        public int MaxWorkers { get; set; }
-        public int cost {get; set;}
-        public bool CanIncrease { get => Money >= cost ; }
-        public int Cycles { get; private set; }
-        public double Rent { get; set; }
-
+    
+        public bool CanIncrease { get => Money >= settings.cost ; }
+    
         private bool isGameActive = true;
 
         private Timer? moneyGenerationTimer;
@@ -39,16 +33,6 @@ namespace Afkgame
 
         public GameManager()
         {
-            Money = 25;
-            Workers = new List<Worker>();
-            TotalDevJuniors = 0;
-            TotalDevSeniors = 0;
-            TotalDesigners = 0;
-            MaxWorkers = 10;
-            Cycles = 0;
-            Rent = 45;
-            cost = 300;
-
             // Timer
             if (isGameActive)
             {
@@ -61,21 +45,21 @@ namespace Afkgame
         // Méthode pour acheter un worker
         public bool BuyWorker(Worker worker)
         {
-            if (Money >= worker.Price && Workers.Count < MaxWorkers)
+            if (Money >= worker.Price && Workers.Count < settings.maxWorkers)
             {
                 Money -= worker.Price;
                 Workers.Add(worker);
                 if (worker.Type == "Junior Dev")
                 {
-                    TotalDevJuniors++;
+                    settings.totalDevJuniors++;
                 }
                 else if (worker.Type == "Senior Dev")
                 {
-                    TotalDevSeniors++;
+                    settings.totalDevSeniors++;
                 }
                 else if (worker.Type == "Designer")
                 {
-                    TotalDesigners++;
+                    settings.totalDesigners++;
                 }
                 return true;
             }
@@ -100,13 +84,13 @@ namespace Afkgame
         {
             double totalMoneyGenerated = Workers.Sum(worker => worker.MoneyGenerated);
             Money += totalMoneyGenerated;
-            Cycles += 1;
+            settings.cycles += 1;
             // Pay workers
-            if (Cycles % 10 == 0 && Cycles != 0)
+            if (settings.cycles % 10 == 0 && settings.cycles != 0)
             {
                 PayWorkers();
             }
-            if (Cycles % 18 == 0 && Cycles != 0)
+            if (settings.cycles % 18 == 0 && settings.cycles != 0)
             {
                 PayRent();
             }
@@ -129,7 +113,7 @@ namespace Afkgame
 
         private void PayRent()
         {
-            Money -= Rent;
+            Money -= settings.rent;
             if (Money <= -1)
             {
                 GameOver();
@@ -153,12 +137,12 @@ namespace Afkgame
             isGameActive = true;
             Money = 25;
             Workers.Clear();
-            TotalDevJuniors = 0;
-            TotalDevSeniors = 0;
-            TotalDesigners = 0;
-            MaxWorkers = 10;
-            Cycles = 0;
-            Rent = 45;
+            settings.totalDevJuniors = 0;
+            settings.totalDevSeniors = 0;
+            settings.totalDesigners = 0;
+            settings.maxWorkers = 10;
+            settings.cycles = 0;
+            settings.rent = 45;
         }
     }
 }

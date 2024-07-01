@@ -9,6 +9,8 @@ public partial class MainPage : ContentPage
 	
 	private GameManager gameManager;
 	IConfiguration configuration;
+    private Settings settings;
+
 
 	public MainPage(IConfiguration config)
 	{
@@ -19,6 +21,8 @@ public partial class MainPage : ContentPage
 		gameManager.MoneyGenerated += GameManager_MoneyGenerated;
         gameManager.WorkersPaidSuccessfully += OnWorkersPaidSuccessfully;
         gameManager.RentPaidSuccessfully += OnRentPaidSuccessfully;
+        
+        settings = configuration.GetRequiredSection("Settings").Get<Afkgame_maui.Settings>();
 
 		UpdateUI();
 		AnimateProgressBar();
@@ -35,23 +39,22 @@ private void GameManager_MoneyGenerated(object sender, EventArgs e)
 
         private void IncreaseWorkersLimit(object sender, EventArgs e)
         {
-            gameManager.MaxWorkers += 10;
-            gameManager.Money -= gameManager.cost;
-            gameManager.Rent *= 3;
-            gameManager.cost = gameManager.cost * 3;
+        
+            settings.maxWorkers += 10;
+            settings.money -= settings.cost;
+            settings.rent *= 3;
+            settings.cost = settings.cost * 3;
             UpdateUI();
         }
 
 
         private void BuyJuniorDev(object sender, EventArgs e)
         {
-            Settings settings1= new Settings();
             Worker newJuniorDev = new Worker("Junior Dev", 5, 3, 3);
             if (gameManager.BuyWorker(newJuniorDev))
             {
                string message; 
-               var settings = configuration.GetRequiredSection("Settings").Get<Afkgame_maui.Settings>();
-                 message = $"Junior Dev bought {settings.costSetting} ";
+                 message = $"Junior Dev bought {settings.cost} ";
                  var toast = Toast.Make(message, CommunityToolkit.Maui.Core.ToastDuration.Long, 30).Show();
                 UpdateUI(); 
             }
@@ -121,24 +124,24 @@ private void GameManager_MoneyGenerated(object sender, EventArgs e)
 
         private void UpdateUI()
         {
-            cycleLabel.Text = gameManager.Cycles.ToString();
+            cycleLabel.Text = settings.cycles.ToString();
             moneyLabel.Text = $"Money: {gameManager.Money}$";
-            totalDevJuniorsLabel.Text = $"Dev Juniors: {gameManager.TotalDevJuniors}";
-            totalDevSeniorsLabel.Text = $"Dev Seniors: {gameManager.TotalDevSeniors}";
-            totalDesignerLabel.Text = $"Designers: {gameManager.TotalDesigners}";
-            workerLimitLabel.Text = $"{gameManager.Workers.Count} / {gameManager.MaxWorkers} Workers";
-            rentLabel.Text = $"Rent : {gameManager.Rent} ";
+            totalDevJuniorsLabel.Text = $"Dev Juniors: {settings.totalDevJuniors}";
+            totalDevSeniorsLabel.Text = $"Dev Seniors: {settings.totalDevSeniors}";
+            totalDesignerLabel.Text = $"Designers: {settings.totalDesigners}";
+            workerLimitLabel.Text = $"{gameManager.Workers.Count} / {settings.maxWorkers} Workers";
+            rentLabel.Text = $"Rent : {settings.rent} ";
 
-            increasWorkersLimitBtn.Text = $"Add 10 slots ({gameManager.cost}$)";
+            increasWorkersLimitBtn.Text = $"Add 10 slots ({settings.cost}$)";
 
-            bool canBuyMoreWorkers = (gameManager.TotalDevJuniors + gameManager.TotalDevSeniors + gameManager.TotalDesigners) < gameManager.MaxWorkers;
+            bool canBuyMoreWorkers = (settings.totalDevJuniors + settings.totalDevSeniors + settings.totalDesigners) < settings.maxWorkers;
 
 
             buyJuniorDevBtn.IsEnabled = canBuyMoreWorkers && gameManager.Money >= 5; 
             buySeniorDevBtn.IsEnabled = canBuyMoreWorkers && gameManager.Money >= 25;
             buyDesignerBtn.IsEnabled = canBuyMoreWorkers && gameManager.Money >= 32;
 
-            if (gameManager.cost >= gameManager.Money)
+            if (settings.cost >= gameManager.Money)
             {
                 increasWorkersLimitBtn.IsEnabled = false;
             }
